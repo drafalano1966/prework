@@ -1,4 +1,4 @@
-package com.example.mvvm.introduction
+package com.example.introduction
 
 fun main (){
     operator fun Int.times(str: String) = str.repeat(this)       // 1

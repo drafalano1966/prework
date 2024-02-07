@@ -1,4 +1,4 @@
-package com.example.mvvm.introduction
+package com.example.introduction
 
 fun main() {
 
