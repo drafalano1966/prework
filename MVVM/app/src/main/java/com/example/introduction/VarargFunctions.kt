@@ -1,6 +1,18 @@
 package com.example.introduction
 
 fun main(){
+
+
+    val d: Int  // 1
+
+    d = if (someCondition()) {
+        1   // 2
+    } else {
+        2   // 2
+    }
+
+    println("this is the value of d: ${d}")
+
     fun printAll(vararg messages: String) {                            // 1
         for (m in messages) println(m)
     }
@@ -19,3 +31,5 @@ fun main(){
     }
     log("Hello", "Hallo", "Salut", "Hola", "你好")
 }
+
+fun someCondition() = true
