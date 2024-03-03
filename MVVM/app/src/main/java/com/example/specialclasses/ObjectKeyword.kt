@@ -3,8 +3,8 @@ import java.util.Random
 
 class LuckDispatcher {                    //1
     fun getNumber() {                     //2
-        var objRandom = Random()
-        println(objRandom.nextInt(90))
+        val objRandom = Random()
+        println("Lucky Dispatcher number: ${objRandom.nextInt(90)}")
     }
 }
 
@@ -12,8 +12,9 @@ class BigBen {                                  //1
     companion object Bonger {                   //2
         fun getBongs(nTimes: Int) {             //3
             for (i in 1 .. nTimes) {
-                print("BONG ")
+                print("BONG ($i) ")
             }
+            println()
         }
     }
 }
@@ -22,8 +23,8 @@ fun main() {
     val d1 = LuckDispatcher()             //3
     val d2 = LuckDispatcher()
 
-    d1.getNumber()                        //4
-    d2.getNumber()
+    d1.getNumber()                     //4
+    d2.getNumber()                       //4
 
     rentPrice(10, 2, 1)
 
@@ -32,7 +33,7 @@ fun main() {
     BigBen.getBongs(12)                         //4
 
 }
-fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
+fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int) {  //1
 
     val dayRates = object {                                                     //2
         var standard: Int = 30 * standardDays
